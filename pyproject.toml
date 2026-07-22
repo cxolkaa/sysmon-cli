@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysmon-cli"
+version = "1.0.0"
+description = "Cross-platform system health monitoring CLI for IT operations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "psutil>=6.0",
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.scripts]
+sysmon = "sysmon.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
